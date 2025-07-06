@@ -16,10 +16,11 @@ fi
 echo "✅ 工作区是干净的。"
 echo
 
-# --- 步骤 2: 运行 ESLint ---
-echo "🔬 步骤 2: 运行 ESLint 检查..."
+# --- 步骤 2: 运行 ESLint 和 TypeScript 检查 ---
+echo "🔬 步骤 2: 运行 ESLint 和 TypeScript 检查..."
 npx eslint . --ext .ts
-echo "✅ ESLint 检查通过。"
+npx tsc --noEmit
+echo "✅ ESLint 和 TypeScript 检查通过。"
 echo
 
 # --- 步骤 3: 提升版本号（但不创建 git 标签） ---
