@@ -61,7 +61,7 @@ The plugin is currently under review. Once approved, you will be able to install
 
 #### 方法一：手动安装 (推荐)
 
-1. 从 [GitHub Releases](https://github.com/awaken233/open-in-cursor/releases) 下载最新版本ZIP
+1. 从 [GitHub Releases](https://github.com/awaken233/open-in-cursor/releases) 下载最新版本 ZIP
 2. 解压文件到 `VaultFolder/.obsidian/plugins/`
 3. 重新加载 Obsidian 并在设置中启用该插件
 
