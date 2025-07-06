@@ -5,4 +5,4 @@ declare module "obsidian" {
 		basePath?: string;
 		getBasePath?: () => string;
 	}
-} 
+}
