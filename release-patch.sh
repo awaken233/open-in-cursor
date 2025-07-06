@@ -22,28 +22,29 @@ npx eslint . --ext .ts
 echo "✅ ESLint 检查通过。"
 echo
 
-# --- 步骤 3: 运行 Prettier 格式化文件 ---
-echo "💅 步骤 3: 运行 Prettier 格式化文件..."
+# --- 步骤 3: 提升版本号（但不创建 git 标签） ---
+echo "🔖 步骤 3: 提升版本号..."
+# --no-git-tag-version 只修改文件，不执行 git 操作
+npm version patch --no-git-tag-version
+echo "✅ 版本文件已更新。"
+echo
+
+# --- 步骤 4: 再次运行 Prettier 格式化文件 ---
+echo "💅 步骤 4: 再次运行 Prettier 以格式化版本文件..."
+# 在版本号更新后再次格式化，确保所有文件（包括被 npm version 修改的）都符合规范
 npx prettier --write .
 echo "✅ Prettier 格式化已应用。"
 echo
 
-# --- 步骤 4: 如果 Prettier 有改动，则提交 ---
-echo "📝 步骤 4: 检查格式化改动并提交..."
-# 检查 Prettier 运行后是否有任何更改
-if ! git diff --quiet HEAD --; then
-    echo "发现格式化改动，正在提交..."
-    git commit -am "style: apply prettier formatting"
-    echo "✅ 格式化改动已提交。"
-else
-    echo "✅ 无需提交格式化改动。"
-fi
-echo
+# --- 步骤 5: 提交所有更改并打上标签 ---
+echo "📝 步骤 5: 提交所有更改并创建标签..."
+# 从 package.json 获取新版本号
+NEW_VERSION=$(node -p "require('./package.json').version")
 
-# --- 步骤 5: 提升版本号 ---
-echo "🔖 步骤 5: 使用 'npm version patch' 提升版本号..."
-npm version patch
-echo "✅ 版本已提升。"
+git add .
+git commit -m "chore(release): v$NEW_VERSION"
+git tag "v$NEW_VERSION"
+echo "✅ 已创建提交和标签 (v$NEW_VERSION)。"
 echo
 
 # --- 步骤 6: 推送到远程仓库 ---
