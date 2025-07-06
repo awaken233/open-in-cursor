@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "open-in-cursor",
+	"name": "Open in Cursor",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
-	"isDesktopOnly": false
+	"description": "Add a hotkey to open the current file in Cursor IDE and jump to the cursor position",
+	"author": "awaken233",
+	"authorUrl": "https://github.com/awaken233",
+	"isDesktopOnly": true
 }
