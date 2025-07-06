@@ -22,8 +22,8 @@ Note: You can customize the hotkey in Obsidian's Hotkeys settings.
 
 #### Method 1: Manual Installation (Recommended)
 
-1. Download the latest release from [GitHub Releases](https://github.com/awaken233/open-in-cursor/releases)
-2. Extract the files to `VaultFolder/.obsidian/plugins/open-in-cursor/`
+1. Download the latest release from [GitHub Releases](https://github.com/awaken233/open-in-cursor/releases) (ZIP)
+2. Extract the files to `VaultFolder/.obsidian/plugins/`
 3. Reload Obsidian and enable the plugin in Settings
 
 #### Method 2: Community Plugin Store (Coming Soon)
@@ -61,9 +61,9 @@ The plugin is currently under review. Once approved, you will be able to install
 
 #### 方法一：手动安装 (推荐)
 
-1. 从 [GitHub Releases](https://github.com/awaken233/open-in-cursor/releases) 下载最新版本
-2. 解压文件到 `VaultFolder/.obsidian/plugins/open-in-cursor/`
-3. 重新加载 Obsidian 并在设置中启用插件
+1. 从 [GitHub Releases](https://github.com/awaken233/open-in-cursor/releases) 下载最新版本ZIP
+2. 解压文件到 `VaultFolder/.obsidian/plugins/`
+3. 重新加载 Obsidian 并在设置中启用该插件
 
 #### 方法二：社区插件商店 (即将上架)
 
