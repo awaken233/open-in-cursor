@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-open-in-cursor",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Obsidian plugin to open current file in Cursor IDE and jump to cursor position",
 	"main": "main.js",
 	"scripts": {
@@ -8,7 +8,13 @@
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"version": "node version-bump.mjs && git add manifest.json versions.json"
 	},
-	"keywords": ["obsidian", "plugin", "cursor", "ide", "editor"],
+	"keywords": [
+		"obsidian",
+		"plugin",
+		"cursor",
+		"ide",
+		"editor"
+	],
 	"author": "awaken233",
 	"license": "MIT",
 	"devDependencies": {
