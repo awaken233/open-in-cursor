@@ -39,13 +39,13 @@ echo
 
 # --- 步骤 5: 提交所有更改并打上标签 ---
 echo "📝 步骤 5: 提交所有更改并创建标签..."
-# 从 package.json 获取新版本号
-NEW_VERSION=$(node -p "require('./package.json').version")
+# 从 manifest.json 获取新版本号（与 GitHub release 名称完全匹配）
+NEW_VERSION=$(node -p "require('./manifest.json').version")
 
 git add .
 git commit -m "chore(release): v$NEW_VERSION"
-git tag "v$NEW_VERSION"
-echo "✅ 已创建提交和标签 (v$NEW_VERSION)。"
+git tag "$NEW_VERSION"
+echo "✅ 已创建提交和标签 ($NEW_VERSION)。"
 echo
 
 # --- 步骤 6: 推送到远程仓库 ---
