@@ -83,12 +83,10 @@ export default class OpenInCursorPlugin extends Plugin {
 			// Get full file path - use the correct method
 			const adapter = this.app.vault.adapter;
 			let vaultPath = "";
-			if ("getBasePath" in adapter) {
-				vaultPath = (
-					adapter as unknown as { getBasePath: () => string }
-				).getBasePath();
-			} else if ("basePath" in adapter) {
-				vaultPath = (adapter as unknown as { basePath: string }).basePath;
+			if (adapter.getBasePath) {
+				vaultPath = adapter.getBasePath();
+			} else if (adapter.basePath) {
+				vaultPath = adapter.basePath;
 			}
 			const filePath = vaultPath
 				? join(vaultPath, activeFile.path)
