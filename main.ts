@@ -39,7 +39,7 @@ export default class OpenInCursorPlugin extends Plugin {
 		// Register main command
 		this.addCommand({
 			id: "open-in-cursor",
-			name: "Open in Cursor",
+			name: "Open",
 			editorCallback: (editor: Editor, view: MarkdownView) => {
 				this.openInCursor(editor, view);
 			},

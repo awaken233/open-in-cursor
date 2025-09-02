@@ -1,6 +1,6 @@
 {
 	"id": "open-in-cursor",
-	"name": "Open",
+	"name": "Open in Cursor",
 	"version": "1.0.5",
 	"minAppVersion": "0.15.0",
 	"description": "Add a hotkey to open the current file in Cursor IDE and jump to the cursor position",

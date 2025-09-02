@@ -1,4 +1,4 @@
-# Open / 在 Cursor 中打开
+# Open in Cursor / 在 Cursor 中打开
 
 [English](#english) | [中文](#中文)
 
