@@ -228,7 +228,7 @@ class OpenInCursorSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		// Basic Settings Section
-		new Setting(containerEl).setName('Basic Settings').setHeading();
+		new Setting(containerEl).setName("Basic Settings").setHeading();
 
 		new Setting(containerEl)
 			.setName("Cursor command")
@@ -246,7 +246,7 @@ class OpenInCursorSettingTab extends PluginSettingTab {
 			);
 
 		// User Interface Section
-		new Setting(containerEl).setName('User Interface').setHeading();
+		new Setting(containerEl).setName("User Interface").setHeading();
 
 		new Setting(containerEl)
 			.setName("Enable notifications")
@@ -273,7 +273,7 @@ class OpenInCursorSettingTab extends PluginSettingTab {
 			);
 
 		// Testing Section
-		new Setting(containerEl).setName('Testing').setHeading();
+		new Setting(containerEl).setName("Testing").setHeading();
 
 		new Setting(containerEl)
 			.setName("Test cursor connection")
@@ -296,7 +296,7 @@ class OpenInCursorSettingTab extends PluginSettingTab {
 			);
 
 		// Usage Information Section
-		new Setting(containerEl).setName('Usage').setHeading();
+		new Setting(containerEl).setName("Usage").setHeading();
 
 		const usageDiv = containerEl.createEl("div", {
 			cls: "open-in-cursor-usage",
