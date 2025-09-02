@@ -23,7 +23,7 @@ interface OpenInCursorSettings {
 const DEFAULT_SETTINGS: OpenInCursorSettings = {
 	cursorCommand: "cursor",
 	enableNotifications: true,
-	hotkey: "Alt+Shift+0",
+	hotkey: "",
 	debugMode: false,
 };
 
@@ -43,12 +43,6 @@ export default class OpenInCursorPlugin extends Plugin {
 			editorCallback: (editor: Editor, view: MarkdownView) => {
 				this.openInCursor(editor, view);
 			},
-			hotkeys: [
-				{
-					modifiers: ["Alt", "Shift"],
-					key: "0",
-				},
-			],
 		});
 
 		// Add settings tab
@@ -56,13 +50,13 @@ export default class OpenInCursorPlugin extends Plugin {
 
 		// Show load message
 		if (this.settings.enableNotifications) {
-			new Notice("Open in Cursor plugin loaded");
+			new Notice("Open in cursor plugin loaded");
 		}
 	}
 
 	onunload() {
 		if (this.settings.enableNotifications) {
-			new Notice("Open in Cursor plugin unloaded");
+			new Notice("Open in cursor plugin unloaded");
 		}
 	}
 
@@ -233,14 +227,11 @@ class OpenInCursorSettingTab extends PluginSettingTab {
 
 		containerEl.empty();
 
-		// Create header
-		containerEl.createEl("h2", { text: "Open in Cursor Settings" });
-
 		// Basic Settings Section
-		containerEl.createEl("h3", { text: "Basic Settings" });
+		new Setting(containerEl).setName('Basic Settings').setHeading();
 
 		new Setting(containerEl)
-			.setName("Cursor Command")
+			.setName("Cursor command")
 			.setDesc(
 				'The command to run Cursor IDE (e.g., "cursor" or full path)'
 			)
@@ -255,10 +246,10 @@ class OpenInCursorSettingTab extends PluginSettingTab {
 			);
 
 		// User Interface Section
-		containerEl.createEl("h3", { text: "User Interface" });
+		new Setting(containerEl).setName('User Interface').setHeading();
 
 		new Setting(containerEl)
-			.setName("Enable Notifications")
+			.setName("Enable notifications")
 			.setDesc("Show notifications when opening files in Cursor")
 			.addToggle((toggle) =>
 				toggle
@@ -270,7 +261,7 @@ class OpenInCursorSettingTab extends PluginSettingTab {
 			);
 
 		new Setting(containerEl)
-			.setName("Debug Mode")
+			.setName("Debug mode")
 			.setDesc("Enable debug logging for troubleshooting")
 			.addToggle((toggle) =>
 				toggle
@@ -282,10 +273,10 @@ class OpenInCursorSettingTab extends PluginSettingTab {
 			);
 
 		// Testing Section
-		containerEl.createEl("h3", { text: "Testing" });
+		new Setting(containerEl).setName('Testing').setHeading();
 
 		new Setting(containerEl)
-			.setName("Test Cursor Connection")
+			.setName("Test cursor connection")
 			.setDesc("Test if Cursor IDE is available and working")
 			.addButton((button) =>
 				button
@@ -305,19 +296,19 @@ class OpenInCursorSettingTab extends PluginSettingTab {
 			);
 
 		// Usage Information Section
-		containerEl.createEl("h3", { text: "Usage" });
+		new Setting(containerEl).setName('Usage').setHeading();
 
 		const usageDiv = containerEl.createEl("div", {
 			cls: "open-in-cursor-usage",
 		});
 		usageDiv.createEl("p", {
-			text: "Hotkey: Alt+Shift+0 (Option+Shift+0 on Mac)",
+			text: 'Use the command palette: "Open in Cursor"',
 		});
 		usageDiv.createEl("p", {
-			text: 'Or use the command palette: "Open in Cursor"',
+			text: "Note: You can set a custom hotkey in Obsidian's Hotkeys settings.",
 		});
 		usageDiv.createEl("p", {
-			text: "Note: You can customize the hotkey in Obsidian's Hotkeys settings.",
+			text: "No default hotkey is provided to avoid conflicts with existing configurations.",
 		});
 	}
 }

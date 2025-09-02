@@ -1,4 +1,4 @@
-# Open in Cursor / 在 Cursor 中打开
+# Open / 在 Cursor 中打开
 
 [English](#english) | [中文](#中文)
 
@@ -12,11 +12,11 @@ An Obsidian plugin that adds a hotkey to open the current file in Cursor IDE and
 
 ### ✨ Features
 
--   **Quick Access**: Open current file in Cursor IDE with a simple hotkey (`Alt+Shift+0`), and jump to the cursor position.
+-   **Quick Access**: Open current file in Cursor IDE with a simple hotkey, and jump to the cursor position.
 -   **Cross-Platform**: Works on Windows, macOS, and Linux
 
-Default Hotkey: `Alt+Shift+0` (Option+Shift+0 on Mac). You can also use the command palette: "Open in Cursor".
-Note: You can customize the hotkey in Obsidian's Hotkeys settings.
+You can set a custom hotkey in Obsidian's Hotkeys settings. You can also use the command palette: "Open in Cursor".
+Note: No default hotkey is provided to avoid conflicts with existing user configurations.
 
 ### 🚀 Installation
 
@@ -51,11 +51,11 @@ The plugin is currently under review. Once approved, you will be able to install
 
 ### ✨ 功能特性
 
--   **快速访问**：通过简单的快捷键（`Alt+Shift+0`）在 Cursor IDE 中打开当前文件, 并跳转到光标位置
+-   **快速访问**：通过快捷键在 Cursor IDE 中打开当前文件, 并跳转到光标位置
 -   **跨平台支持**：支持 Windows、macOS 和 Linux
 
-默认快捷键：`Alt+Shift+0`（Mac 上是 Option+Shift+0）。您也可以使用命令面板："Open in Cursor"。
-注意：您可以在 Obsidian 的热键设置中自定义此快捷键。
+您可以在 Obsidian 的热键设置中自定义快捷键。您也可以使用命令面板："Open in Cursor"。
+注意：为避免与现有用户配置冲突，不提供默认快捷键。
 
 ### 🚀 安装方法
 
