@@ -20,20 +20,18 @@ Note: No default hotkey is provided to avoid conflicts with existing user config
 
 ### 🚀 Installation
 
-#### Method 1: Manual Installation (Recommended)
-
-1. Download the latest release from [GitHub Releases](https://github.com/awaken233/open-in-cursor/releases) (ZIP)
-2. Extract the files to `VaultFolder/.obsidian/plugins/`
-3. Reload Obsidian and enable the plugin in Settings
-
-#### Method 2: Community Plugin Store (Coming Soon)
-
-The plugin is currently under review. Once approved, you will be able to install it via the Community Plugin Store.
+#### Method 1: Community Plugin Store (Recommended)
 
 1. Open Obsidian Settings
 2. Go to `Community plugins` and disable Safe mode
 3. Browse community plugins and search for "Open in Cursor"
 4. Install and enable the plugin
+
+#### Method 2: Manual Installation
+
+1. Download the latest release from [GitHub Releases](https://github.com/awaken233/open-in-cursor/releases) (ZIP)
+2. Extract the files to `VaultFolder/.obsidian/plugins/`
+3. Reload Obsidian and enable the plugin in Settings
 
 ### ⚙️ Settings
 
@@ -59,20 +57,18 @@ The plugin is currently under review. Once approved, you will be able to install
 
 ### 🚀 安装方法
 
-#### 方法一：手动安装 (推荐)
-
-1. 从 [GitHub Releases](https://github.com/awaken233/open-in-cursor/releases) 下载最新版本 ZIP
-2. 解压文件到 `VaultFolder/.obsidian/plugins/`
-3. 重新加载 Obsidian 并在设置中启用该插件
-
-#### 方法二：社区插件商店 (即将上架)
-
-插件正在审核中。审核通过后，即可通过社区插件商店安装。
+#### 方法一：社区插件商店 (推荐)
 
 1. 打开 Obsidian 设置
 2. 进入 `第三方插件` 并关闭安全模式
 3. 浏览社区插件并搜索 "Open in Cursor"
 4. 安装并启用插件
+
+#### 方法二：手动安装
+
+1. 从 [GitHub Releases](https://github.com/awaken233/open-in-cursor/releases) 下载最新版本 ZIP
+2. 解压文件到 `VaultFolder/.obsidian/plugins/`
+3. 重新加载 Obsidian 并在设置中启用该插件
 
 ### ⚙️ 设置选项
 
