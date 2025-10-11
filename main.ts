@@ -6,6 +6,7 @@ import {
 	Plugin,
 	PluginSettingTab,
 	Setting,
+	TFolder,
 } from "obsidian";
 import { execFile, ExecException } from "child_process";
 import { platform } from "os";
@@ -74,42 +75,37 @@ export default class OpenInCursorPlugin extends Plugin {
 			const lineNumber = cursor.line + 1; // Convert to 1-based index
 			const columnNumber = cursor.ch + 1; // Convert to 1-based index
 
-			// Get full file path - use the correct method
+			// Get full file path using Obsidian's official API
 			const adapter = this.app.vault.adapter;
-			let vaultPath = "";
-			if (adapter.getBasePath) {
-				vaultPath = adapter.getBasePath();
-			} else if (adapter.basePath) {
-				vaultPath = adapter.basePath;
-			}
-			const filePath = vaultPath
-				? join(vaultPath, activeFile.path)
-				: activeFile.path;
+			const vaultPath = adapter.getBasePath?.() || '';
+			const filePath = vaultPath ? join(vaultPath, activeFile.path) : activeFile.path;
 
 			// Debug file path information
 			if (this.settings.debugMode) {
 				console.log("Active file:", activeFile.path);
-				console.log("Vault path:", vaultPath);
 				console.log("Full file path:", filePath);
 				console.log("Line:Column:", `${lineNumber}:${columnNumber}`);
 			}
 
 			// Build and execute command
 			const command = this.settings.cursorCommand;
-			const args = [
+			
+			// Ensure file path is properly quoted for shell execution
+			const quotedFilePath = `"${filePath}"`;
+			const argsQuoted = [
 				`--goto`,
-				`${filePath}:${lineNumber}:${columnNumber}`,
+				`${quotedFilePath}:${lineNumber}:${columnNumber}`,
 			];
 
 			// Debug logging
 			if (this.settings.debugMode) {
-				console.log("Open in Cursor command:", command, args.join(" "));
+				console.log("Open in Cursor command:", command, argsQuoted.join(" "));
 			}
 
 			// Execute command using execFile for better performance and security
 			execFile(
 				command,
-				args,
+				argsQuoted,
 				(
 					error: ExecException | null,
 					stdout: string,
