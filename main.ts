@@ -76,8 +76,10 @@ export default class OpenInCursorPlugin extends Plugin {
 
 			// Get full file path using Obsidian's official API
 			const adapter = this.app.vault.adapter;
-			const vaultPath = adapter.getBasePath?.() || '';
-			const filePath = vaultPath ? join(vaultPath, activeFile.path) : activeFile.path;
+			const vaultPath = adapter.getBasePath?.() || "";
+			const filePath = vaultPath
+				? join(vaultPath, activeFile.path)
+				: activeFile.path;
 
 			// Debug file path information
 			if (this.settings.debugMode) {
@@ -88,7 +90,7 @@ export default class OpenInCursorPlugin extends Plugin {
 
 			// Build and execute command
 			const command = this.settings.cursorCommand;
-			
+
 			// Ensure file path is properly quoted for shell execution
 			const quotedFilePath = `"${filePath}"`;
 			const argsQuoted = [
@@ -98,7 +100,11 @@ export default class OpenInCursorPlugin extends Plugin {
 
 			// Debug logging
 			if (this.settings.debugMode) {
-				console.log("Open in Cursor command:", command, argsQuoted.join(" "));
+				console.log(
+					"Open in Cursor command:",
+					command,
+					argsQuoted.join(" ")
+				);
 			}
 
 			// Execute command using execFile for better performance and security
