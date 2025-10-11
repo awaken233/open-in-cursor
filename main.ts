@@ -6,7 +6,6 @@ import {
 	Plugin,
 	PluginSettingTab,
 	Setting,
-	TFolder,
 } from "obsidian";
 import { execFile, ExecException } from "child_process";
 import { platform } from "os";
