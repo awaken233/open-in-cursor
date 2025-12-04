@@ -45,16 +45,19 @@ Note: No default hotkey is provided to avoid conflicts with existing user config
 You can configure the plugin to work with different VSCode-based IDEs by setting the command path:
 
 **Cursor:**
+
 ```
 /Applications/Cursor.app/Contents/Resources/app/bin/cursor
 ```
 
 **Kiro:**
+
 ```
 /Applications/Kiro.app/Contents/Resources/app/bin/code
 ```
 
 **VSCode:**
+
 ```
 /Applications/Visual Studio Code.app/Contents/Resources/app/bin/code
 ```
@@ -104,16 +107,19 @@ Or simply use `cursor`, `code`, or `kiro` if they are in your system PATH.
 您可以通过设置命令路径来配置插件使用不同的类 VSCode IDE：
 
 **Cursor：**
+
 ```
 /Applications/Cursor.app/Contents/Resources/app/bin/cursor
 ```
 
 **Kiro：**
+
 ```
 /Applications/Kiro.app/Contents/Resources/app/bin/code
 ```
 
 **VSCode：**
+
 ```
 /Applications/Visual Studio Code.app/Contents/Resources/app/bin/code
 ```

@@ -93,7 +93,7 @@ export default class OpenInCursorPlugin extends Plugin {
 
 			// Conditional quote handling for different IDEs
 			// Cursor IDE requires quotes, but VSCode-based IDEs (like Kiro) don't
-			const isCursorIDE = command.toLowerCase().includes('cursor');
+			const isCursorIDE = command.toLowerCase().includes("cursor");
 			const pathArg = isCursorIDE ? `"${filePath}"` : filePath;
 			const argsQuoted = [
 				`--goto`,
