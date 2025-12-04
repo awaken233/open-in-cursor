@@ -8,11 +8,12 @@
 
 ### 📖 Description
 
-An Obsidian plugin that adds a hotkey to open the current file in Cursor IDE and automatically jump to the cursor position. Perfect for seamless integration between Obsidian note-taking and code editing workflows.
+An Obsidian plugin that adds a hotkey to open the current file in Cursor IDE (or other VSCode-based IDEs) and automatically jump to the cursor position. Perfect for seamless integration between Obsidian note-taking and code editing workflows.
 
 ### ✨ Features
 
--   **Quick Access**: Open current file in Cursor IDE with a simple hotkey, and jump to the cursor position.
+-   **Quick Access**: Open current file in Cursor IDE (or other VSCode-based IDEs) with a simple hotkey, and jump to the cursor position.
+-   **Multi-IDE Support**: Compatible with Cursor, VSCode, Kiro, and other VSCode-based editors
 -   **Cross-Platform**: Works on Windows, macOS, and Linux
 
 You can set a custom hotkey in Obsidian's Hotkeys settings. You can also use the command palette: "Open in Cursor".
@@ -35,9 +36,30 @@ Note: No default hotkey is provided to avoid conflicts with existing user config
 
 ### ⚙️ Settings
 
--   **Cursor Command Path**: Customize the Cursor executable path
+-   **Cursor Command Path**: Customize the IDE executable path
 -   **Notifications**: Toggle success/error notifications
 -   **Debug Mode**: Enable for troubleshooting
+
+#### Supported IDEs
+
+You can configure the plugin to work with different VSCode-based IDEs by setting the command path:
+
+**Cursor:**
+```
+/Applications/Cursor.app/Contents/Resources/app/bin/cursor
+```
+
+**Kiro:**
+```
+/Applications/Kiro.app/Contents/Resources/app/bin/code
+```
+
+**VSCode:**
+```
+/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code
+```
+
+Or simply use `cursor`, `code`, or `kiro` if they are in your system PATH.
 
 ---
 
@@ -45,11 +67,12 @@ Note: No default hotkey is provided to avoid conflicts with existing user config
 
 ### 📖 简介
 
-这是一个 Obsidian 插件，可以通过快捷键在 Cursor IDE 中打开当前文件并自动跳转到光标位置。完美整合 Obsidian 笔记记录和代码编辑工作流程。
+这是一个 Obsidian 插件，可以通过快捷键在 Cursor IDE（或其他类 VSCode IDE）中打开当前文件并自动跳转到光标位置。完美整合 Obsidian 笔记记录和代码编辑工作流程。
 
 ### ✨ 功能特性
 
--   **快速访问**：通过快捷键在 Cursor IDE 中打开当前文件, 并跳转到光标位置
+-   **快速访问**：通过快捷键在 Cursor IDE（或其他类 VSCode IDE）中打开当前文件, 并跳转到光标位置
+-   **多 IDE 支持**：兼容 Cursor、VSCode、Kiro 等所有基于 VSCode 的编辑器
 -   **跨平台支持**：支持 Windows、macOS 和 Linux
 
 您可以在 Obsidian 的热键设置中自定义快捷键。您也可以使用命令面板："Open in Cursor"。
@@ -72,6 +95,27 @@ Note: No default hotkey is provided to avoid conflicts with existing user config
 
 ### ⚙️ 设置选项
 
--   **Cursor 命令路径**：自定义 Cursor 可执行文件路径
+-   **Cursor 命令路径**：自定义 IDE 可执行文件路径
 -   **通知设置**：切换成功/错误通知
 -   **调试模式**：启用以进行故障排除
+
+#### 支持的 IDE
+
+您可以通过设置命令路径来配置插件使用不同的类 VSCode IDE：
+
+**Cursor：**
+```
+/Applications/Cursor.app/Contents/Resources/app/bin/cursor
+```
+
+**Kiro：**
+```
+/Applications/Kiro.app/Contents/Resources/app/bin/code
+```
+
+**VSCode：**
+```
+/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code
+```
+
+或者如果它们在系统 PATH 中，可以直接使用 `cursor`、`code` 或 `kiro`。

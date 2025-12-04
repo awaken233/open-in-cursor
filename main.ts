@@ -91,11 +91,13 @@ export default class OpenInCursorPlugin extends Plugin {
 			// Build and execute command
 			const command = this.settings.cursorCommand;
 
-			// Ensure file path is properly quoted for shell execution
-			const quotedFilePath = `"${filePath}"`;
+			// Conditional quote handling for different IDEs
+			// Cursor IDE requires quotes, but VSCode-based IDEs (like Kiro) don't
+			const isCursorIDE = command.toLowerCase().includes('cursor');
+			const pathArg = isCursorIDE ? `"${filePath}"` : filePath;
 			const argsQuoted = [
 				`--goto`,
-				`${quotedFilePath}:${lineNumber}:${columnNumber}`,
+				`${pathArg}:${lineNumber}:${columnNumber}`,
 			];
 
 			// Debug logging
