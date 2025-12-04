@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-open-in-cursor",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"description": "Obsidian plugin to open current file in Cursor IDE and jump to cursor position",
 	"main": "main.js",
 	"scripts": {
